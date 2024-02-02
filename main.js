@@ -7,7 +7,10 @@ this.UserId = userid;
 }
 
 let button = document.getElementById("sign+up")
-let newUser
+let B_Piano = document.getElementById("piano")
+let B_Drums = document.getElementById("drums")
+let B_Guitar = document.getElementById("guitar")
+let newUser = null
 
 button.addEventListener("click", () => {
 newUser = new User("TEST_USER", 9249402)
