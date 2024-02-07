@@ -6,6 +6,10 @@ body {
   background-image: linear-gradient(Gold, White)
 }
 
+#topbar {
+float: right
+}
+
 #topbar button {
   font-size: 45px
 }
