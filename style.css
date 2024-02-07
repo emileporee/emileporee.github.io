@@ -7,6 +7,7 @@ body {
 }
 
 #topbar a {
+  float: right;
   font-size: 45px;
   background-color: Silver;
   border-radius: 15px
