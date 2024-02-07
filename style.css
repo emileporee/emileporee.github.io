@@ -6,16 +6,16 @@ body {
   background-image: linear-gradient(Gold, White)
 }
 
-#topbar button {
+#topbar a {
   font-size: 45px;
   background-color: Silver;
   border-radius: 15px
 }
 
-#topbar button:hover {
+#topbar a:hover {
   background-color: White
 }
 
-#topbar button:active {
+#topbar a:active {
   background-color: Silver
 }
