@@ -7,7 +7,8 @@ body {
 }
 
 #topbar button {
-  font-size: 45px
+  font-size: 45px;
+  border-radius: 15px
 }
 
 #topbar button:hover {
