@@ -3,7 +3,8 @@ body {
   font-size: 60px;
   padding: 0px;
   margin: 0px;
-  background-image: linear-gradient(Beige, White)
+  background-image: url("https://img.freepik.com/free-photo/abstract-digital-grid-black-background_53876-97647.jpg");
+  background-image-cover: cover
 }
 
 #topbar a {
