@@ -1,8 +1,3 @@
-// 3D Modeling Page
-// Variables
-
-const Model = new Blob
-
 // Music Page
 // Variables
 const TrebleClef = document.getElementById("trebleClef");
