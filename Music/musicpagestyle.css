@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 0px auto;
+    margin: 0px auto;
+    border: 5px solid black;
+}
+
+#daw {
+    z-index: 1;
+}
+
+.clefs {
+    margin-top: 105px;
+    position: absolute;
+}
+
+.notes {
+    position: absolute;
+}
+
+.line {
+    position: absolute;
+}
+
+.clefSelection {
+    font-size: 20px;
+}
+
+.noteSelection {
+    font-size: 15px;
+}
