@@ -19,3 +19,11 @@ p {
 a {
   text-decoration: none;
 }
+
+a:hover {
+  color: white
+}
+
+a:active {
+  color: gray
+}
