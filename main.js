@@ -40,6 +40,7 @@ class Note {
 }
 
 function setPosition(element, position) {
+    element.style.position = "absolute"
     element.style.top = position.y
     element.style.left = position.x
 }
