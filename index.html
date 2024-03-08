@@ -15,6 +15,38 @@
     <a href="3dpage.html">To another another page</a>
     <br> <br> <br>
     <h1> Posts </h1>
+    <div id="fullscreen" hidden>
+<button id="exitFullscreen">Exit Fullscreen</button> <br>
+</div>
+<p> Markup Guide <br> For bold text try <br> <b>&lt;b&gt;text&lt;/</b>b&gt; <br> For italicized text try <br> <b>&lt;i&gt;text&lt;/i&gt;</b> <br> For a header you can try <br> <b>&lt;h1&gt;text&lt;/h1&gt;</b><br> For a line break try <br> <b>&lt;br&gt;text&lt;/br&gt;</b> </p>
+<button id="postCreatorDirector">
+Enter Post Creator </button>
+<div id="postCreator">
+<h1> Post Creator </h1>
+Title <br>
+<input id="titleField" type="text"> <br>
+Description <br>
+<input id="descriptionField" type="text"> <br>
+Author Alias (optional) <br>
+<input id="authorAliasField" type="text"> <br>
+Image <br>
+<input id="imageField" type="file"> <br>
+Background Color <br>
+<input id="colorField" type="color"> <br>
+<button id="createPostButton"> Create </button>
+<h1 id="errorLog" hidden> Error: This is an error </h1>
+</div>
+<div class="posts" id="post">
+<button id="deleteButton"> Delete Post </button>
+<h3> Author: Name @unknown <h3>
+<br>
+<h1> Post Title </h1>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLsKCgd8yOVE6GnPZZSYLqrrBTIsW8diIpqU2uRv_4lw&s"></img>
+<p> This is the <b> default </b> post description. You'll be seeing a whole bunch of these soon if you stay <br> By the way, you should delete this post since it's a default one so you can add some <i> style </i> </p> <br>
+<p id="warning"> Like & Comment boosters do not work right now ⛔️ <br> </p>
+<button id="likeButton">❤️ Like </button>
+<button id="commentButton">💬 Comment</button>
+</div>
   </body>
   <script src="main.js"></script>
 </html>
