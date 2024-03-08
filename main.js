@@ -6,7 +6,7 @@ const postCreatorDirector = document.getElementById("postCreatorDirector")
 const titleField = document.getElementById("titleField")
 const descriptionField = document.getElementById("descriptionField")
 const authorAliasField = document.getElementById("authorAliasField")
-const imageField = document.getElementById("imageField")
+const mediaField = document.getElementById("mediaField")
 const colorField = document.getElementById("colorField")
 const PostLayout = document.getElementById("post")
 const errorLog = document.getElementById("errorLog")
@@ -67,8 +67,8 @@ createPostButton.addEventListener("click", () => {
       error("Your alias must be under 15 characters")
       return
    }
-   if (imageField.files.length === 1) {
-      Image.src = URL.createObjectURL(imageField.files[0])
+   if (mediaField.files.length === 1) {
+      Image.src = URL.createObjectURL(mediaField.files[0])
    }
    if (colorField.value != "" || colorField.value != undefined || colorField.value != null) {
       Post.style.backgroundColor = colorField.value
