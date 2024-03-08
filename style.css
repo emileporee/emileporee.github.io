@@ -6,6 +6,9 @@ body {
   margin: 0px auto;
   background-image: url("https://img.freepik.com/free-photo/man-walking-precipice_1134-331.jpg");
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
 }
 
 a {
