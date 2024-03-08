@@ -58,7 +58,7 @@ button {
    background-color: silver
 }
 
-.posts h3 {
+.posts label {
    position: absolute;
    float: left;
    color: white
