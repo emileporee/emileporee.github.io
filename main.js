@@ -39,7 +39,7 @@ function error(context) {
 createPostButton.addEventListener("click", () => {
    const Post = PostLayout.cloneNode(true)
    const Header = Post.querySelector("h1")
-   const HeaderThree = Post.querySelector("h3")
+   const Label = Post.querySelector("label")
    const Paragraph = Post.querySelector("p")
    const Image = Post.querySelector("img")
    if (titleField.value.length > 0 && titleField.value.length < 35) {
@@ -61,7 +61,7 @@ createPostButton.addEventListener("click", () => {
       return
    }
    if (authorAliasField.value.length > 0 && authorAliasField.value.length <= 15) {
-      HeaderThree.innerHTML = "Author: " + authorAliasField.value + " @unknown"
+      Label.innerHTML = "Author: " + authorAliasField.value + " @unknown"
    }
    else if (authorAliasField.value.length > 15 && authorAliasField.value.length > 0) {
       error("Your alias must be under 15 characters")
