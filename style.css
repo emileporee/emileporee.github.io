@@ -8,14 +8,6 @@ body {
   background-size: cover;
 }
 
-h1 {
-  text-align: center;
-}
-
-p {
-  text-align: center;
-}
-
 a {
   text-decoration: none;
 }
@@ -26,4 +18,84 @@ a:hover {
 
 a:active {
   color: gray
+}
+
+@keyframes scrollAnimation {
+   from {
+      opacity: 0
+   },
+   to {
+      opacity: 1
+   }
+}
+
+h1 {
+   font-size: 75px;
+   color: white
+}
+
+p {
+   background-color: black;
+   color: white;
+   font-size: 50px
+}
+
+button {
+   font-size: 50px
+}
+
+.scrollAnim {
+   animation: 2s scrollAnimation linear
+}
+
+.posts {
+   border: 2px solid black;
+   background-color: silver
+}
+
+.posts h3 {
+   position: absolute;
+   float: left;
+   color: white
+}
+
+.posts img {
+   width: 350px;
+   height: 350px
+}
+
+.posts #deleteButton {
+   background-color: red;
+   color: white;
+   border-radius: 5px
+}
+
+#postCreator {
+   background-color: silver;
+   border: 1px solid black
+}
+
+#postCreator input {
+   font-size: 35px;
+   text-align: center
+}
+
+#errorLog {
+   color: red;
+   text-align: center
+}
+
+#fullscreen {
+   width: 100vw;
+   height: 100vh;
+   position: sticky;
+   top: 10px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center
+}
+
+#warning {
+   color: black;
+   background-image: linear-gradient(white, silver)
 }
