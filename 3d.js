@@ -25,9 +25,9 @@ GL.bufferData(GL.ARRAY_BUFFER, new Float32Array(Data), GL.STATIC_DRAW)
 
 const VertexShader = GL.createShader(GL.VERTEX_SHADER)
 GL.shaderSource(VertexShader, `
-    attribute vec3 Position
+    attribute vec3 Position;
     void main() {
-        GL_Position = vec4(Position, 1)
+        GL_Position = vec4(Position, 1);
     }
 `)
 GL.compileShader(VertexShader)
@@ -37,7 +37,7 @@ GL.compileShader(VertexShader)
 const FragmentShader = GL.createShader(GL.FRAGMENT_SHADER)
 GL.shaderSource(FragmentShader, `
     void main() {
-        GL_FragColor = vec4(1, 0, 0, 1)
+        GL_FragColor = vec4(1, 0, 0, 1);
     }
 `)
 GL.compileShader(FragmentShader)
