@@ -29,10 +29,17 @@ const NoteSFX = {
     D_Piano: "D_Piano.mp3",
     F_Piano: "F_Piano.mp3",
     FSharp_Piano: "FSharp_Piano.mp3",
+    G_Piano: "G_Piano.mp3",
     ClosedHiHat_Drums: "ClosedHiHat_Drums.mp3",
     OpenHiHat_Drums: "OpenHiHat_Drums.mp3",
     Kick_Drums: "Kick_Drums.mp3",
-    Snare_Drums: "Snare_Drums.mp3"
+    Snare_Drums: "Snare_Drums.mp3",
+    TomOne_Drums: "TomOne_Drums.mp3",
+    TomTwo_Drums: "TomTwo_Drums.mp3",
+    FloorTom_Drums: "FloorTom_Drums.mp3",
+    BassDrum_Drums: "BassDrum_Drums.mp3",
+    CrashCymbol_Drums: "CrashCymbol_Drums.mp3",
+    RideCymbol_Drums: "RideCymbol_Drums.mp3"
 }
 let MAX_BARS = 10
 let IsPlaying = false
