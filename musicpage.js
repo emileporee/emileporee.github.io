@@ -32,7 +32,7 @@ const NoteSFX = {
     ClosedHiHat_Drums: "ClosedHiHat_Drums.mp3",
     OpenHiHat_Drums: "OpenHiHat_Drums.mp3",
     Kick_Drums: "Kick_Drums.mp3",
-    Snare_Drums: "Snare_Drums.mp3
+    Snare_Drums: "Snare_Drums.mp3"
 }
 let MAX_BARS = 10
 let IsPlaying = false
