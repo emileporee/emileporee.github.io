@@ -1,35 +1,44 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Test Website</title>
-    <link rel="stylesheet" href="musicpagestyle.css">
+<title> Demo </title>
+<meta charset="utf-8">
 </head>
 <body>
-    <div id="daw">
-        <img class="clefs" id="trebleClef" width=50 height=100 src="https://icon2.cleanpng.com/20190604/rss/kisspng-musical-note-musical-symbols-clef-image-note-clipart-line-art-music-23-4-x-1175-free-c-5cf68d85aca330.0533131615596619577071.jpg"></img>
-        <img hidden class="clefs" id="bassClef" width=50 height=100 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjC-mvl91CALvKX2MiALBkKm0n4TFq3LG7eg&usqp=CAU"></img>
-        <img hidden class="notes" id="wholeNote" width=25 height=25 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_zY-5j8yH6FTtKfdX11t-odZAHVPDnf-_Qf7Tz9YrAw&s"></img>
-        <img hidden class="notes" id="halfNote" width=25 height=25 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMvd_XhhBfVcMQVi29TVU-EwqttY5d1P7sBg&usqp=CAU"></img>
-        <img hidden class="notes" id="quarterNote" width=25 height=25 src="https://p7.hiclipart.com/preview/56/676/900/quarter-note-stem-musical-note-eighth-note-dotted-note-music-note-thumbnail.jpg"></img>
-        <img hidden class="notes" id="eigthNote" width=25 height=25 src="https://icon2.cleanpng.com/20190604/oac/kisspng-musical-note-portable-network-graphics-clip-art-im-music-notes-png-vector-clipart-psd-peoplepng-c-5cf6824d5aef90.6927682015596590853725.jpg"></img>
-        <img hidden class="notes" id="sixteenthNote" width=25 height=50 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHpleBrcnmoJeFHD81xK_R1m3RSOfAwzEosw&usqp=CAU"></img>
-        <img id="line" width=650 height=300 src="https://mjelivestockequipment.com/wp-content/uploads/2020/09/5-Bar-Continuous-Fence-Panel-300x300.png"></img>
-    </div>
-    <div id="controls">
-        <p id="CNT">CURRENT <b>NOTE</b> TYPE: WholeNote</p>
-        <p id="CCT">CURRENT <b>CLEF</b> TYPE: TrebleClef</p>
-        <b>Clef Type:</b>
-        <button class="clefSelection" id="TrebleClef">Treble Clef</button>
-        <button class="clefSelection" id="BassClef">Bass Clef</button>
-        <br>
-        <b>Note Type:</b>
-        <button class="noteSelection" id="WholeNote">Whole Note</button>
-        <button class="noteSelection" id="HalfNote">Half Note</button>
-        <button class="noteSelection" id="QuarterNote">Quarter Note</button>
-        <button class="noteSelection" id="EigthNote">Eigth Note</button>
-        <button class="noteSelection" id="SixteenthNote">Sixteenth Note</button>
-        <br> <br> <br>
-    </div>
+<h1> Studio </h1>
+<label id="barlabel"> Bar 0 </label>
+<br>
+<label id="numberline"> 0 &nbsp; 1 &nbsp; 2 &nbsp; 3 &nbsp; 4 &nbsp; 5 &nbsp; 6 &nbsp; 7 &nbsp; 8 &nbsp; 9 &nbsp; 10 </label>
+<div id="visualizer">
+<div id="line"></div>
+<button hidden class="track" id="node"> Node </button>
+</div>
+<div id="studio">
+<button id="play"> Play </button>
+<button id="stop"> Stop </button>
+<button id="keepvisonscreen"> KeepVisOnScreen </button>
+<button id="restart"> Restart Project </button>
+<br>
+<button class="instrument" id="Guitar"> Guitar </button>
+<button class="instrument" id="Piano"> Piano </button>
+<button class="instrument" id="Drums"> Drums </button>
+<br>
+Set Tempo: <input id="tempochanger" type="range"></input>
+<br>
+<label id="instrumentselection"> Instrument: Guitar </label>
+<br>
+<label id="tempo"> Tempo (BMP) = 1 </label>
+</div>
+<div id="station">
+<button class="key" id="A"> A </button>
+<button class="sharpkey" id="ASharp"> A# </button>
+<button class="key" id="B"> B </button>
+<button class="key" id="C"> C </button>
+<button class="sharpkey" id="CSharp"> C# </button>
+<button class="key" id="D"> D </button>
+<button class="key" id="F"> F </button>
+<button class="sharpkey" id="FSharp"> F# </button>
+<button class="key" id="G"> G </button>
+<br> <br> <br>
+</div>
 </body>
-<script src="musicpage.js"></script>
 </html>
