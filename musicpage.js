@@ -20,7 +20,7 @@ const NoteSFX = {
     D_Guitar: "D_Guitar.mp3",
     G_Guitar: "G_Guitar.mp3",
     B_Guitar: "B_Guitar.mp3",
-    e_Guitar: "E_Guitar.mp3",
+    e_Guitar: "e_Guitar.mp3",
     A_Piano: "A_Piano.mp3",
     ASharp_Piano: "ASharp_Piano.mp3",
     B_Piano: "B_Piano.mp3",
