@@ -80,8 +80,8 @@ function KeyClick(noteType) {
     NewNode.style.left = Line.style.left
     NewNode.style.display = "block"
     document.body.appendChild(NewNode)
-    Line.style.left = Number(Line.style.left.replaceAll("px", "")) + 225 + "px"
-    if (NoteSFX[noteType] && NoteSFX[noteType] != "") {
+    Line.style.left = Number(Line.style.left.replaceAll("px", "")) + NewNode.clientWidth
+    if (NoteSFX[`${noteType}_${InstrumentSelection}`] && NoteSFX[`${noteType}_${InstrumentSelection}`] != "") {
         const Sound = new Audio(NoteSFX[noteType])
         Sound.src = NoteSFX[noteType]
         Sound.play()
@@ -185,6 +185,12 @@ Restart.addEventListener("click", () => {
         Visualizer.style.height = 100 + "vh"
         KeepVisOnScreen.innerText = "KeepVisOnScreen"
         IsVisAlwaysOnScreen = false
+    }
+    let ElementList = document.getElementsByClassName("track")
+    for (let i = 0; i <= ElementList.length; i++) {
+        if (ElementList[i].id != "node") {
+            document.body.removeChild(ElementList[i])
+        }
     }
     Line.style.left = 0 + "px"
     MAX_BARS = 10
