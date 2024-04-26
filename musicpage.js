@@ -37,7 +37,6 @@ const NoteSFX = {
     TomOne_Drums: "TomOne_Drums.mp3",
     TomTwo_Drums: "TomTwo_Drums.mp3",
     FloorTom_Drums: "FloorTom_Drums.mp3",
-    BassDrum_Drums: "BassDrum_Drums.mp3",
     CrashCymbal_Drums: "CrashCymbal_Drums.mp3",
     RideCymbal_Drums: "RideCymbal_Drums.mp3"
 }
