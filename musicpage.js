@@ -102,6 +102,7 @@ function MoveLine(amount) {
     BarLabel.innerText = `Bar ${Bar}`
     for (let i in Notes) {
         if (i.Bar == Bar && NoteSFX[i.NoteType] && NoteSFX[i.NoteType] != "") {
+            alert("hey")
             const Sound = new Audio(NoteSFX[i.NoteType])
             Sound.src = NoteSFX[i.NoteType]
             Sound.play()
@@ -134,6 +135,7 @@ SharpKeys.forEach((sharpkey) => {
 })
 
 Play.addEventListener("click", () => {
+    if (IsPlaying === true) { return }
     IsPlaying = true
     if (Number(Line.style.left.replaceAll("px", "")) >= window.innerWidth) {
         Line.style.left = 0 + "px"
@@ -149,7 +151,7 @@ Play.addEventListener("click", () => {
 })
 
 Stop.addEventListener("click", () => {
-    if (Loop) {
+    if (Loop || IsPlaying === true) {
         clearInterval(Loop)
         Loop = undefined
         IsPlaying = false
@@ -204,7 +206,7 @@ Restart.addEventListener("click", () => {
 })
 
 window.addEventListener("keypress", (event) => {
-    if (event.code === "Space" && !Loop) {
+    if (event.code === "Space" && !Loop || IsPlaying === false) {
             event.preventDefault()
             IsPlaying = true
             if (Number(Line.style.left.replaceAll("px", "")) >= window.innerWidth) {
@@ -219,7 +221,7 @@ window.addEventListener("keypress", (event) => {
                 }
             }, 10)
         }
-    else if (event.code == "Space" && Loop) {
+    else if (event.code == "Space" && Loop || IsPlaying === true) {
         event.preventDefault()
         clearInterval(Loop)
         Loop = undefined
