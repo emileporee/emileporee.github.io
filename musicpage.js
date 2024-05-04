@@ -81,6 +81,7 @@ function KeyClick(noteType) {
     NewNode.style.display = "block"
     document.body.appendChild(NewNode)
     Line.style.left = Number(Line.style.left.replaceAll("px", "")) + NewNode.clientWidth
+    Bar = Math.floor((Number(Line.style.left.replaceAll("px", "")) / window.innerWidth) * MAX_BARS)
     if (NoteSFX[`${noteType}_${InstrumentSelection}`] && NoteSFX[`${noteType}_${InstrumentSelection}`] != "") {
         const Sound = new Audio(NoteSFX[noteType])
         Sound.src = NoteSFX[noteType]
@@ -100,11 +101,10 @@ function MoveLine(amount) {
     Line.style.left = CurrentPosition + amount + "px"
     Bar = Math.floor((CurrentPosition / window.innerWidth) * MAX_BARS)
     BarLabel.innerText = `Bar ${Bar}`
-    for (let i in Notes) {
-        if (i.Bar == Bar && NoteSFX[i.NoteType] && NoteSFX[i.NoteType] != "") {
-            alert("hey")
-            const Sound = new Audio(NoteSFX[i.NoteType])
-            Sound.src = NoteSFX[i.NoteType]
+    for (i in Notes) {
+        if (Notes[i].Bar == Bar && NoteSFX[Notes[i].NoteType]) {
+            const Sound = new Audio(NoteSFX[Notes[i].NoteType])
+            Sound.src = NoteSFX[Notes[i].NoteType]
             Sound.play()
         }
     }
