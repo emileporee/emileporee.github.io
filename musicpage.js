@@ -67,6 +67,8 @@ try {
         format: "u8",
         sampleRate: 20,
         numberOfFrames: 5,
+        numberOfChannels: 10,
+        timestamp: 1000,
         data: new Uint32Array(JSON.stringify([NoteSFX.A_Guitar]))
     }))
     alert(EncodedData)
