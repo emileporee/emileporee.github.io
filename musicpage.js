@@ -63,7 +63,12 @@ try {
         output: onComplete,
         error: onReject
     })
-    let EncodedData = Encoder.encode(new AudioData(NoteSFX.A_Guitar))
+    let EncodedData = Encoder.encode(new AudioData({
+        format: "u8",
+        sampleRate: 20,
+        numberOfFrames: 5,
+        data: new Uint32Array(JSON.stringify([NoteSFX.A_Guitar]))
+    }))
     alert(EncodedData)
 }
 catch(error) {
