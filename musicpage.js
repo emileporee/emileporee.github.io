@@ -49,9 +49,20 @@ let Tempo = 1
 let Bar = 0
 let Loop
 
+function onComplete() {
+    alert("complete")
+}
+
+function onReject() {
+    alert("rejected")
+}
+
 try {
     alert("hi")
-    let Encoder = new AudioEncoder()
+    let Encoder = new AudioEncoder({
+        output: onComplete,
+        error: onReject
+    })
     let EncodedData = Encoder.encode(new AudioData(NoteSFX.A_Guitar))
     alert(EncodedData)
 }
