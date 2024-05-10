@@ -49,6 +49,16 @@ let Tempo = 1
 let Bar = 0
 let Loop
 
+try {
+    alert("hi")
+    let Encoder = new AudioEncoder()
+    let EncodedData = Encoder.encode(new AudioData(NoteSFX.A_Guitar))
+    alert(EncodedData)
+}
+catch(error) {
+    alert(error)
+}
+
 class Note {
     constructor(noteType) {
         if (NotesList[noteType] != undefined) {
