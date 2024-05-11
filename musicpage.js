@@ -69,6 +69,7 @@ function testFunction() {
         DataReader.addEventListener("loadend", () => {
             alert("yo")
             DataBuffer = DataReader.result
+            resolve()
         })
     })
     .then(() => {
