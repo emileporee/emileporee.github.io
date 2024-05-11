@@ -3,6 +3,7 @@ const CTX = DrawingBoard.getContext("2d")
 const Increment = document.getElementById("increment")
 const Decrement = document.getElementById("decrement")
 const Display = document.getElementById("display")
+const Color = document.getElementById("color")
 const Clear = document.getElementById("clear")
 let LINE_SIZE = 10
 let isDrawing = false
@@ -35,6 +36,9 @@ Decrement.addEventListener("click", () => {
     if ((LINE_SIZE - 1) === 0) { return }
     LINE_SIZE -= 1
     Display.innerText = LINE_SIZE
+})
+Color.addEventListener("change", () => {
+    CTX.fillStyle = Color.value
 })
 Clear.addEventListener("click", () => {
     CTX.clearRect(0, 0, DrawingBoard.width, DrawingBoard.height)
