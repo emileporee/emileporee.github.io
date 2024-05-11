@@ -64,7 +64,6 @@ function testFunction() {
     let DataBuffer = undefined
     alert(ChosenInstrument)
     DataReader.readAsArrayBuffer(new Blob([ChosenInstrument], {type: "audio/mp3"}))
-    alert("sheesh")
     new Promise((resolve) => {
         DataReader.addEventListener("loadend", () => {
             alert("datareader readAsArrayBuffer complete")
