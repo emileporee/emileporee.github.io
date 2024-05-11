@@ -67,20 +67,19 @@ function testFunction() {
     alert("sheesh")
     new Promise((resolve) => {
         DataReader.addEventListener("loadend", () => {
-            alert("yo")
+            alert("datareader readAsArrayBuffer complete")
             DataBuffer = DataReader.result
             resolve()
         })
     })
     .then(() => {
         alert("yes")
-        const Data = new BaseAudioContext().decodeAudioData(DataBuffer)
-        alert("ye")
+        new AudioContext().decodeAudioData(DataBuffer)
         .then((res) => {
+            alert("Decoded Audio Data:")
             alert(res)
-            console.log(res)
         })
-    }, () => {})
+    })
 }
 
 try {
