@@ -77,7 +77,10 @@ function testFunction() {
     })
 }
 
+try {
 testFunction()
+}
+catch(error) {}
 
 class Note {
     constructor(noteType) {
