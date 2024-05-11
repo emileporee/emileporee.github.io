@@ -1,5 +1,3 @@
-// Write JavaScript Here:
-
 const DrawingBoard = document.getElementById("drawing-board")
 const CTX = DrawingBoard.getContext("2d")
 const Increment = document.getElementById("increment")
@@ -9,7 +7,6 @@ const Clear = document.getElementById("clear")
 let LINE_SIZE = 10
 let isDrawing = false
 
-DrawingBoard.preventDefault()
 DrawingBoard.addEventListener("mouseup", () => {
     isDrawing = false
 })
@@ -26,7 +23,6 @@ DrawingBoard.addEventListener("mousemove", (event) => {
     CTX.beginPath()
     CTX.moveTo(event.clientX, event.clientY)
 })
-
 Increment.addEventListener("click", () => {
     if ((LINE_SIZE + 1) === 25) { return }
     LINE_SIZE += 1
