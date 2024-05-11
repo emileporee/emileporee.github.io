@@ -60,15 +60,16 @@ function onReject() {
 function testFunction() {
     alert("hi")
     const DataBuffer = undefined
-    alert("Test1")
     const DataReader = new FileReader()
-    alert("test2")
     const ChosenInstrument = NoteSFX.CrashCymbal_Drums
     alert(ChosenInstrument)
     DataReader.readAsArrayBuffer(new Blob([ChosenInstrument], {type: "audio/mp3"}))
+    alert("sheesh")
     DataReader.addEventListener("loadend", () => {
+        alert("yo")
         DataBuffer = DataReader.result
     })
+    alert("yes")
     const Data = new BaseAudioContext().decodeAudioData(DataBuffer)
     alert("ye")
     .then((res) => {
