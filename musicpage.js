@@ -65,16 +65,20 @@ function testFunction() {
     alert(ChosenInstrument)
     DataReader.readAsArrayBuffer(new Blob([ChosenInstrument], {type: "audio/mp3"}))
     alert("sheesh")
-    DataReader.addEventListener("loadend", () => {
-        alert("yo")
-        DataBuffer = DataReader.result
+    new Promise((resolve) => {
+        DataReader.addEventListener("loadend", () => {
+            alert("yo")
+            DataBuffer = DataReader.result
+        })
     })
-    alert("yes")
-    const Data = new BaseAudioContext().decodeAudioData(DataBuffer)
-    alert("ye")
-    .then((res) => {
-        alert(res)
-        console.log(res)
+    .then(() => {
+        alert("yes")
+        const Data = new BaseAudioContext().decodeAudioData(DataBuffer)
+        alert("ye")
+        .then((res) => {
+            alert(res)
+            console.log(res)
+        })
     })
 }
 
