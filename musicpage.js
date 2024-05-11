@@ -69,7 +69,7 @@ try {
         numberOfFrames: 5,
         numberOfChannels: 10,
         timestamp: 1000,
-        data: new DataView(new ArrayBuffer(256), 32, 16)
+        data: new DataView(new ArrayBuffer(256), 12, 4)
     }))
     alert(EncodedData)
 }
