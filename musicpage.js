@@ -69,6 +69,7 @@ try {
     alert("ye")
     .then((res) => {
         alert(res)
+        console.log(res)
     })
 }
 catch(error) {
