@@ -69,7 +69,7 @@ try {
         numberOfFrames: 5,
         numberOfChannels: 10,
         timestamp: 1000,
-        data: new Uint32Array(JSON.stringify([NoteSFX.A_Guitar]))
+        data: [1.0, 2.0, 3.0, 4.0, 5.0]
     }))
     alert(EncodedData)
 }
