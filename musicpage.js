@@ -59,19 +59,17 @@ function onReject() {
 
 try {
     alert("hi")
-    let Encoder = new AudioEncoder({
-        output: onComplete,
-        error: onReject
+    const Buffer = undefined
+    const DataReader = new FileReader()
+    DataReader.readAsArrayBuffer(new Blob([new Audio(NoteSFX.CrashCymbal_Drums)], {type: audio/mpeg}))
+    DataReader.addEventListener("loadend", () => {
+        Buffer = DataReader.result
     })
-    let EncodedData = Encoder.encode(new AudioData({
-        format: "u8",
-        sampleRate: 20,
-        numberOfFrames: 5,
-        numberOfChannels: 10,
-        timestamp: 1000,
-        data: new ArrayBuffer(32)
-    }))
-    alert(EncodedData)
+    const Data = new BaseAudioContext().decodeAudioData(Buffer)
+    alert("ye")
+    .then((res) => {
+        alert(res)
+    })
 }
 catch(error) {
     alert(error)
