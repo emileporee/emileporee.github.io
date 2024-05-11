@@ -61,7 +61,7 @@ try {
     alert("hi")
     const Buffer = undefined
     const DataReader = new FileReader()
-    DataReader.readAsArrayBuffer(new Blob([new Audio(NoteSFX.CrashCymbal_Drums)], {type: "audio/mpeg"}))
+    DataReader.readAsArrayBuffer(new Blob([new Audio(NoteSFX.CrashCymbal_Drums)]))
     DataReader.addEventListener("loadend", () => {
         Buffer = DataReader.result
     })
