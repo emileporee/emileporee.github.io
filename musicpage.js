@@ -59,9 +59,9 @@ function onReject() {
 
 function testFunction() {
     alert("hi")
-    const DataBuffer = undefined
     const DataReader = new FileReader()
     const ChosenInstrument = NoteSFX.CrashCymbal_Drums
+    let DataBuffer = undefined
     alert(ChosenInstrument)
     DataReader.readAsArrayBuffer(new Blob([ChosenInstrument], {type: "audio/mp3"}))
     alert("sheesh")
@@ -80,7 +80,7 @@ function testFunction() {
             alert(res)
             console.log(res)
         })
-    })
+    }, () => {})
 }
 
 try {
