@@ -57,7 +57,7 @@ function onReject() {
     alert("rejected")
 }
 
-try {
+function testFunction() {
     alert("hi")
     const DataBuffer = undefined
     alert("Test1")
@@ -76,9 +76,8 @@ try {
         console.log(res)
     })
 }
-catch(error) {
-    alert(error)
-}
+
+testFunction()
 
 class Note {
     constructor(noteType) {
