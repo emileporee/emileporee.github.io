@@ -7,8 +7,8 @@ const Clear = document.getElementById("clear")
 let LINE_SIZE = 10
 let isDrawing = false
 
-DrawingBoard.clientWidth = window.innerWidth
-DrawingBoard.clientHeight = window.innerHeight
+DrawingBoard.offsetWidth = window.innerWidth
+DrawingBoard.offsetHeight = window.innerHeight
 
 DrawingBoard.addEventListener("mouseup", () => {
     isDrawing = false
