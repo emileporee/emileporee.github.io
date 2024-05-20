@@ -66,8 +66,8 @@ function testFunction() {
     DataReader.readAsArrayBuffer(new Blob([ChosenInstrument], {type: "audio/mp3"}))
     new Promise((resolve) => {
         DataReader.addEventListener("loadend", () => {
-            alert("datareader readAsArrayBuffer complete")
             DataBuffer = DataReader.result
+            console.log(...DataBuffer)
             resolve()
         })
     })
