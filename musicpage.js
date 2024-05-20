@@ -73,8 +73,9 @@ function testFunction() {
     })
     .then(() => {
         alert("yes")
-        new AudioContext().decodeAudioData(DataBuffer)
-        console.log("DOES THE CONSOLE SEE THIS?")
+        let Context = new AudioContext()
+        console.log("does the console see this?")
+        Context.decodeAudioData(DataBuffer)
         .then((res) => {
             console.log("does the console see this though??")
             alert("Decoded Audio Data:")
