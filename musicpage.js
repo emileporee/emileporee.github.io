@@ -67,7 +67,7 @@ function testFunction() {
     new Promise((resolve) => {
         DataReader.addEventListener("loadend", () => {
             DataBuffer = DataReader.result
-            console.log(...DataBuffer)
+            console.log(DataBuffer)
             resolve()
         })
     })
