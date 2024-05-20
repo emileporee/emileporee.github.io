@@ -59,6 +59,9 @@ function onReject() {
 
 function testFunction() {
     alert("hi")
+    let test = new Audio(NoteSFX.A_Guitar)
+    test.src = NoteSFX.A_Guitar
+    test.play()
     const DataReader = new FileReader()
     const ChosenInstrument = NoteSFX.CrashCymbal_Drums
     let DataBuffer = undefined
